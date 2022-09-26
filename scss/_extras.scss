@@ -1,0 +1,47 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-size: 65%;
+    scroll-behavior: smooth;
+}
+
+$mainPurple: rgba(73, 24, 78, 1);
+$footerPurple: rgba(249, 26, 159, 0.1);
+$white: rgba(255, 255, 255, 1);
+$background-image: linear-gradient(90deg, rgba(249, 26, 159, 1),
+rgba(153, 51, 162, 1));
+$gradient2: linear-gradient( rgba(255, 255, 255, 0.4) 10%,
+rgba(255, 255, 255, 0.1));
+$pinkGlass:rgba(241, 216, 243, 0.5);
+$hotPink:rgba(249, 26, 159, 1);
+$whiteAccent:rgba(252, 247, 253, 0.5);
+$buttonPink:rgba(241, 216, 243, 1);
+$activeEditor:rgba(252, 247, 253, 1);
+$border:2px solid rgba(255, 255, 255, 0.1);
+$pinkbtntext:rgba(73, 24, 78, 1);
+
+@mixin title($titletext){
+    font-size: $titletext;
+    color: var(--white);
+    font-weight: 700;
+}
+@mixin paragraph($paragraphtext){
+    font-size: 24px;
+    color: var(--activeEditor);
+    font-weight: $paragraphtext;
+    line-height: 40px;
+}
+
+@mixin flex($gap){
+    display: flex;
+    gap: $gap;
+    align-items: center;
+}
+
+@mixin grid($val) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+    gap:3rem;
+ }

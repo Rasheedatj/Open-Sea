@@ -1,0 +1,689 @@
+@import './extras';
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&display=swap');
+
+
+body{
+    background-color: $mainPurple; 
+    font-family: 'Space Grotesk';
+    background-image: url(../../dist/images/purplebg.svg),
+                      url(../../dist/images/Ellipse\ 1bg-2.svg),
+                      url(../../dist/images/Ellipse\ 3bg-3.svg),
+                      url(../../dist/images/Ellipse\ 1bg-2.svg);
+    background-position: top 0 right 0,
+                           top 8% left 0,
+                           top 20% right 0,
+                           top 45% left 0 ;
+    background-repeat: no-repeat;
+}
+
+.pink_btn{
+    background-color: $buttonPink;
+    padding: 1rem;
+    color:$pinkbtntext ;
+    font-size: 2rem;
+    text-transform: capitalize;
+    transition: transform 700ms ease;
+
+    &:hover{
+        transform: scale(1.1);
+    }
+}
+
+header{
+    padding: 3rem 3.5rem;
+    @include flex(2rem);
+    justify-content: space-between;
+    color: $white;
+
+
+    .logo{
+        @include flex(.5rem);
+
+        p{
+            font-size: 2rem
+        }
+    }
+    .search-bar{
+        @include flex(3rem);
+        border-top: 1px solid $white;
+        border-inline: 1px solid $white;
+        border-bottom: .5px solid white;
+        padding: 1rem 2rem;
+        border-radius: 2rem;
+        width: 20%;
+        background-image:  $gradient2;
+        overflow: hidden;
+
+        input{
+            font-size: 2rem;
+            width: 100%;
+            background-color: transparent;
+            border: none;
+            color: $white;
+            outline: none;
+        }
+        
+        ::placeholder{
+            color: $white;
+        }
+        i{
+            font-size: 20px;
+            align-self: flex-end;
+    
+        }
+    }
+    nav{
+        @include flex(2rem);
+        width: 30%;
+        justify-content: space-between;
+
+        a{
+            color:$white;
+            text-transform: capitalize;
+            font-size: 1.8rem;
+            transition: color 200ms ease;
+
+            &:hover{
+                color: $hotPink
+            }
+        }
+    }
+}
+
+.hero{
+
+    @include flex(1rem);
+    justify-content: space-between;
+    width: 100%;
+    padding: 6rem 4rem;
+
+    .box1{
+        width: 50%;
+        h1{
+            @include title(6rem) ;
+            color: $white;
+        }
+       & > p{
+           @include paragraph(300);
+           color: $white;
+           padding-block: 3rem;
+       }
+    }
+    .hero-btn{
+        @include flex(10rem);
+
+        .pink_btn{
+         @include flex(2rem);
+         padding: 1.5rem;
+            a{
+                font-size: 2rem
+            }
+            i{
+                font-size: 2rem
+            }
+        }
+
+        .watch{
+            @include flex(2rem);
+
+            i{
+                height: 6rem;
+                width: 6rem;
+                background-color: $buttonPink;
+                border-radius: 50%;
+                display: grid;
+                place-items: center;
+                font-size: 3rem;
+                color: $hotPink;
+            }
+            p{
+                @include paragraph(300);
+           color: $white;
+           padding-block: 2rem;
+            }
+        }
+    }
+    .stat{
+        @include flex(.1rem);
+        justify-content: space-between;
+        border-top: 1px solid $white;
+            border-inline: 1px solid $white;
+            border-bottom: $border;
+        padding: 1.5rem;
+        text-align: center;
+        margin-block: 9rem;
+        background-image: $gradient2;
+
+        h3{
+            @include title(20px);
+            color: $white;
+        }
+        p{
+          font-size: 1.8rem;
+          color: $white;
+          text-transform: capitalize;
+          padding-top: 10px;
+        }
+        .bordered-box{
+            border-inline: 2px solid $whiteAccent;
+            padding-inline: 7rem;
+        }
+    }
+}
+
+.brands{
+    @include flex(.1rem);
+    justify-content: space-around;
+    border: $border;
+    margin:  4rem;
+    padding: 4rem 2rem;
+}
+
+.editors_pick{
+    padding: 6rem 4rem;
+
+
+    & > h1{
+        @include title(5rem) ;
+        color: $white; 
+    }
+
+   
+
+    .buttons{
+        @include flex(.1rem);
+        justify-content: space-between;
+
+        .btn{
+            margin-block: 5rem;
+            font-size: 2rem;
+            color: $white;
+            background-color: $pinkGlass;
+            width: 10%;
+            padding: 1.5rem;
+            text-align: center;
+            text-transform: capitalize;
+            transition: background-color 300ms ease;
+
+            &:hover{
+                background-color: $white;
+                color: black;
+            }
+        }
+    }
+
+    .collection{
+        @include grid(40rem);
+
+
+        .box{
+           background-image: $gradient2;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            border-top: 1px solid $white;
+            border-inline: 1px solid $white;
+            border-bottom: $border;
+           
+            
+            .heading{
+                @include title(4rem);
+                text-transform: capitalize;
+                color: $white;
+    
+                span{
+                    color: $hotPink;
+                    font-size: 2.5rem
+                }
+            }
+    
+            .owner_info{
+                @include flex(1rem);
+                justify-content: space-between;
+               @include paragraph (500);
+               font-size: 4rem;
+               color: $white;
+              
+    
+               .glass{
+                   color: $whiteAccent;
+               }
+
+               .name-capital{
+                   text-transform: capitalize;
+               }
+            }
+    
+            .footer{
+                @include flex(1rem);
+                justify-content: space-between;
+    
+                .gradient_btn{
+                    color: $white;
+                    text-transform: capitalize;
+                    font-size: 2rem;
+                    background-image:$background-image ;
+                    background-size: 200%;
+                    background-position: left;
+                    padding: 1rem;
+                    transition: background-position 500ms ease;
+
+                    &:hover{
+                        background-position: right
+                    }
+                }
+    
+                .history{
+                    @include flex(2rem);
+                   
+    
+                    p{
+                        color: $white;
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+    }
+    .button{
+       display: flex;
+       justify-content: center;
+       margin-top: 5rem;
+    }
+}
+
+.artwork{
+    @include flex(0rem);
+    justify-content: space-between;
+    padding: 6rem 4rem;
+
+    // & > div{
+    //     width: 50%;
+    // }
+
+    .box1{
+        width: 40%;
+        @include flex(3rem);
+        flex-direction: column;
+        h1{
+            @include title(5rem) ;
+            color: $white;
+        }
+       & > p{
+           @include paragraph(300);
+           color: $white;
+       }
+     
+       .pink_btn{
+        @include flex(2rem);
+        padding: 1.5rem;
+        align-self: start;
+      
+           a{
+               font-size: 2rem
+           }
+           i{
+               font-size: 2rem
+           }
+       }
+    }
+
+    .box2{
+        width: 60%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      
+      
+
+      .grid-4{
+          grid-column: 2/3;
+      }
+      .grid-1{
+         grid-row: 1/3;
+         align-self: center;
+      }
+      .grid-3{
+        grid-column: 3/4;
+        grid-row: 1/3;
+        align-self: center;
+      }
+
+     img{
+         transition: transform 250ms ease;
+
+         &:hover{
+            transform: translateY(-10px);
+            cursor: pointer;
+        }
+     }
+    }
+}
+
+.create{
+    padding: 6rem 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+
+  
+
+    & > h1{
+        @include title(5rem) ;
+        color: $white;
+    }
+    p{
+      font-size: 2rem;
+       color: $white;
+   }
+   .box-container{
+      @include flex(2rem);
+
+      .box{
+          @include flex(2rem);
+          flex-direction: column;
+          align-items: flex-start;
+          
+
+          &:hover img{
+            transform: translateY(-10px)
+        }
+
+          h1{
+            @include title(3rem) ;
+            color: $hotPink;
+          }
+
+          img{
+              height: 6rem;
+              width: 6rem;
+              background-color: $white;
+              display: grid;
+              place-items: center;
+              padding: 1rem;
+              border-radius: 10px;
+              transition: transform 250ms ease;
+          }
+      }
+   }
+}
+.auction{
+    padding: 6rem 4rem;
+   
+
+    & > h1{
+        @include title(5rem);
+        color: $white;
+        padding-bottom: 4rem;
+    }
+.collection{
+    @include grid(10rem);
+
+
+    .box{
+       background-image: $gradient2;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        border-top: 1px solid $white;
+            border-inline: 1px solid $white;
+            border-bottom: $border;
+       
+        
+        .heading{
+            @include title(4rem);
+            text-transform: capitalize;
+            color: $white;
+
+            span{
+                color: $hotPink;
+                font-size: 2.5rem
+            }
+        }
+
+        .owner_info{
+            @include flex(1rem);
+            justify-content: space-between;
+           @include paragraph (500);
+           font-size: 4rem;
+           color: $white;
+          
+
+           .glass{
+               color: $whiteAccent;
+           }
+
+           .name-capital{
+               text-transform: capitalize;
+           }
+        }
+
+        .footer{
+            @include flex(1rem);
+            justify-content: space-between;
+
+            .gradient_btn{
+                color: $white;
+                text-transform: capitalize;
+                font-size: 2rem;
+                background-image:$background-image ;
+                background-size: 200%;
+                background-position: left;
+                padding: 1rem;
+                transition: background-position 500ms ease;
+
+                &:hover{
+                    background-position: right
+                }
+            }
+
+            .history{
+                @include flex(2rem);
+               
+
+                p{
+                    color: $white;
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+}
+
+.carousel{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 5rem;
+}
+}
+
+.seller{
+    padding: 6rem 4rem;
+
+    & > h1{
+        @include title(5rem);
+        color: $white;
+        padding-bottom: 4rem;
+    }
+
+    .box-container{
+        @include grid(40rem);
+
+        .box{
+            background-color: $pinkGlass;
+            @include flex(.1rem);
+            justify-content: space-between;
+            padding: 1rem 1.5rem;
+
+                p{
+                    font-size: 20px;
+                    color: $white;
+                    padding-bottom: .5rem;
+                    font-weight: 500;
+                }
+                .pink{
+                    color: $hotPink;
+                }
+            .dot{
+                @include flex(1rem);
+            }
+        }
+    }
+    .button{
+        display: flex;
+        justify-content: center;
+        margin-top: 5rem;
+     }
+}
+
+.newsletter{
+    margin: 6rem 4rem;
+    border-top: 1px solid $white;
+            border-inline: 1px solid $white;
+            border-bottom: $border;
+            padding: 2rem;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            background-image: $gradient2;
+            position: relative;
+            
+            &::after{
+                position: absolute;
+                content: "";
+                background-image: url(../../dist/images/images.jpg);
+                background-position: center;
+                inset: 0;
+                background-size: cover;
+                background-repeat: no-repeat;
+                z-index: -1;
+                opacity: .1;
+            }
+
+            h1{
+                @include title(5rem);
+                color: $white;
+            }
+
+            p{
+                @include paragraph(300);
+                color: $white;
+            }
+           .flex{
+               @include flex(2rem);
+               background-color: $pinkGlass;
+               padding: 1rem 1.5rem;
+               align-self: center;
+               width: 50%;
+               justify-content: space-between;
+               
+
+               input{
+                font-size: 2rem;
+                width: 100%;
+                background-color: transparent;
+                border: none;
+                color: $white;
+                outline: none;
+                }
+
+                ::placeholder{
+                    color: $white;
+                }
+
+                .button{
+                    width: 50%;
+                    display: flex;
+                    justify-content: flex-end;
+
+                    .gradient_btn{
+                        color: $white;
+                        text-transform: capitalize;
+                        font-size: 2rem;
+                        background-image:$background-image ;
+                        background-size: 200%;
+                        background-position: left;
+                        padding: 1rem 1.5rem;
+                        transition: background-position 500ms ease;
+    
+                        &:hover{
+                            background-position: right
+                        }}
+                }
+            }
+}
+
+footer{
+    margin-top: 6rem;
+    padding: 4rem;
+    background-color: $footerPurple;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+
+    .box-container{
+        @include flex(1rem);
+        justify-content: space-between;
+        color: $white;
+
+        .box{
+            
+            img{
+                width: 20%;
+            }
+
+            p{
+             font-size: 1.8rem;
+             color: $white;
+             padding-top: 1rem;
+            }
+
+            h3{
+                @include title(2rem);
+                text-transform: capitalize;
+                padding-bottom: 15px;
+            }
+          
+            li{
+               list-style: none;
+                font-size: 1.8rem;
+                font-weight: 300;
+                padding-bottom: 8px;
+                cursor: pointer;
+                text-transform: capitalize;
+
+                &:hover{
+                    color: $buttonPink
+                }
+            }
+        }
+    }
+
+    .box-container2{
+        @include flex(5rem);
+        justify-content: space-between;
+
+        .icons{
+            @include flex(1.5rem);
+
+            img{
+                cursor: pointer;
+              
+            }
+        }
+
+        p{
+            font-size: 1.8rem;
+            color: $white;
+            width: 57.5%;
+
+            span{
+                color: $hotPink;
+                font-size: 1.9rem;
+            }
+        }
+    }
+}
