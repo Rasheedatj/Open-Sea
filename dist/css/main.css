@@ -14,6 +14,7 @@ body {
   background-image: url(../../dist/images/purplebg.svg), url(../../dist/images/Ellipse\ 1bg-2.svg), url(../../dist/images/Ellipse\ 3bg-3.svg), url(../../dist/images/Ellipse\ 1bg-2.svg);
   background-position: top 0 right 0, top 8% left 0, top 20% right 0, top 45% left 0;
   background-repeat: no-repeat;
+  background-blend-mode: overlay;
 }
 
 .pink_btn {
@@ -29,12 +30,20 @@ body {
 }
 
 header {
-  padding: 4rem 3.5rem;
+  padding: 3rem 3.5rem;
   display: flex;
   gap: 2rem;
   align-items: center;
   justify-content: space-between;
   color: rgb(255, 255, 255);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: rgb(73, 24, 78);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
 header .logo {
   display: flex;
@@ -107,7 +116,7 @@ header nav a:hover {
   width: 50%;
 }
 .hero .box1 h1 {
-  font-size: 6rem;
+  font-size: 5rem;
   color: var(--white);
   font-weight: 700;
   color: rgb(255, 255, 255);
