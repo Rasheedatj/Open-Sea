@@ -30,7 +30,7 @@ body{
 }
 
 header{
-    padding: 3rem 3.5rem;
+    padding: 4rem 3.5rem;
     @include flex(2rem);
     justify-content: space-between;
     color: $white;
@@ -247,7 +247,7 @@ header{
                font-size: 4rem;
                color: $white;
               
-    
+              
                .glass{
                    color: $whiteAccent;
                }
@@ -299,10 +299,6 @@ header{
     @include flex(0rem);
     justify-content: space-between;
     padding: 6rem 4rem;
-
-    // & > div{
-    //     width: 50%;
-    // }
 
     .box1{
         width: 40%;
@@ -693,5 +689,12 @@ footer{
                 font-size: 1.9rem;
             }
         }
+    }
+}
+
+@media screen and (max-width:1200px) {
+    *{
+        font-size: 30%;
+    
     }
 }

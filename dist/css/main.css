@@ -29,7 +29,7 @@ body {
 }
 
 header {
-  padding: 3rem 3.5rem;
+  padding: 4rem 3.5rem;
   display: flex;
   gap: 2rem;
   align-items: center;
@@ -707,4 +707,10 @@ footer .box-container2 p {
 footer .box-container2 p span {
   color: rgb(249, 26, 159);
   font-size: 1.9rem;
+}
+
+@media screen and (max-width: 1200px) {
+  * {
+    font-size: 30%;
+  }
 }/*# sourceMappingURL=main.css.map */
